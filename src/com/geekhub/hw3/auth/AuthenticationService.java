@@ -27,7 +27,7 @@ public class AuthenticationService {
         if (login == null || password==null || login.isEmpty() || password.isEmpty()) throw new WrongCredentialsException("wrong credentials");
         User user = getUserByLogin(login);
         if (user != null) {
-            if (user.getPassword().equals(password)) {
+            if (user.getPassword()!=null && user.getPassword().equals(password)) {
                 return user;
             } else {
                 throw new WrongPasswordException("wrong password");

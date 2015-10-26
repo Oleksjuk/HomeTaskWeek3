@@ -1,6 +1,5 @@
 package com.geekhub.hw3.comparable;
 
-import java.lang.Comparable;
 import java.util.Arrays;
 
 public class ArraySorter {
@@ -8,9 +7,11 @@ public class ArraySorter {
     public static void main(String[] args) {
         Comparable[] sortedIntegers = sort(new Integer[]{2343, 2, 6, 1, 0, -1});
         Comparable[] sortedStrings = sort(new String[]{ "abc", "54", "op" });
+        Comparable[] sortedPersons = sort(new Person[] {new Person("Valik",18), new Person("Vadim", 22), new Person("Sergey",17)});
 
         System.out.println("Sorted integers: " + Arrays.toString(sortedIntegers));
         System.out.println("Sorted strings: " + Arrays.toString(sortedStrings));
+        System.out.println("Sorted persons: " + Arrays.toString(sortedPersons));
     }
 
     /**
